@@ -12,4 +12,4 @@ https://developer.android.com/kotlin/style-guide
 7. [Build Apk](BuildApk.md)
 
 # References
-
+- https://developer.android.com/kotlin/style-guide
