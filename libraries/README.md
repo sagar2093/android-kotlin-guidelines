@@ -1,5 +1,7 @@
+# Things to consider while using third party libraries
 - Use latest stable versions only.
-- Do not create a pile of libararies for minor works instead you can create util classes and extension methods.
+- Do not create a pile of libararies in `build.gradle` for minor works instead you can create util classes and extension methods.
+- You can create widgets for simple layout tweaks.
 
 # Recommended Libraries
 ### Permission Handling
