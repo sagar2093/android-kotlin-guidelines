@@ -3,8 +3,8 @@ An approach for coding guidelines while using kotlin in android based on officia
 https://developer.android.com/kotlin/style-guide
 
 # Coding Guidelines
-1. [Project Structure](kotlin-guide/ProjectStructure.md)
-2. [Kotlin Guidelines](KotlinGuide.md)
+1. [Project Structure](ProjectStructure.md)
+2. [Kotlin Guidelines](kotlin-guide/README.md)
 3. [Resource Guidelines](ResourceGuide.md)
 4. [Android Manifest Guidelines](ManifestGuide.md)
 5. [Gradle Practices](Gradle.md)
