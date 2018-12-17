@@ -9,6 +9,7 @@ https://developer.android.com/kotlin/style-guide
 4. [Android Manifest Guidelines](ManifestGuide.md)
 5. [Gradle Practices](Gradle.md)
 6. [Libraries](Libraries.md)
+7. [Build Apk](BuildApk.md)
 
 # References
 
