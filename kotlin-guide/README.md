@@ -1,20 +1,6 @@
 # Contents
 ## Source Files
-All source files must be encoded as UTF-8.
-### Naming
-https://developer.android.com/kotlin/style-guide#naming
-### Special Characters
-https://developer.android.com/kotlin/style-guide#special_characters
-### Structures
-https://developer.android.com/kotlin/style-guide#structure
+https://github.com/sagar2093/android-kotlin-guidelines/tree/master/kotlin-guide/SourceFiles.md
+
 ## Formatting
-### Braces
-https://developer.android.com/kotlin/style-guide#braces
-### WhiteSpace
-https://developer.android.com/kotlin/style-guide#whitespace
-### Specific Constructs
-https://developer.android.com/kotlin/style-guide#specific_constructs
-### Naming
-https://developer.android.com/kotlin/style-guide#naming_2
-### Documentation
-https://developer.android.com/kotlin/style-guide#documentation
+https://github.com/sagar2093/android-kotlin-guidelines/tree/master/kotlin-guide/Formatting.md
