@@ -10,13 +10,13 @@ If a source file contains only a single top-level class, the file name should re
 class MyClass { }
 ```
 
-```
+```kotlin
 // Bar.kt
 class Bar { }
 fun Runnable.toBar(): Bar = // …
 ```
 
-```
+```kotlin
 // Map.kt
 fun <T, O> Set<T>.map(func: (T) -> O): List<O> = // …
 fun <T, O> List<T>.map(func: (T) -> O): List<O> = // …
@@ -37,10 +37,10 @@ For the remaining non-ASCII characters, either the actual Unicode character (e.g
 
 ```
 Example	Discussion
-val unitAbbrev = "μs"	Best: perfectly clear even without a comment.
+val unitAbbrev = "μs"	            Best: perfectly clear even without a comment.
 val unitAbbrev = "\u03bcs" // μs	Poor: there’s no reason to use an escape with a printable character.
-val unitAbbrev = "\u03bcs"`	Poor: the reader has no idea what this is.
-return "\ufeff" + content	Good: use escapes for non-printable characters, and comment if necessary.
+val unitAbbrev = "\u03bcs"`	      Poor: the reader has no idea what this is.
+return "\ufeff" + content	        Good: use escapes for non-printable characters, and comment if necessary.
 ```
 
 ## Structure
@@ -56,7 +56,7 @@ Exactly one blank line separates each of these sections.
 
 ### Copyright / License
 If a copyright or license header belongs in the file it should be placed at the immediate top in a multi-line comment.
-```
+```kotlin
 /*
  * Copyright 2017 Google, Inc.
  *
@@ -64,7 +64,7 @@ If a copyright or license header belongs in the file it should be placed at the 
  */
 ```
 Do not use a KDoc-style or single-line-style comment.
-```
+```kotlin
 /**
  * Copyright 2017 Google, Inc.
  *
@@ -72,7 +72,7 @@ Do not use a KDoc-style or single-line-style comment.
  */
 ```
 
-```
+```kotlin
 // Copyright 2017 Google, Inc.
 //
 // ...
