@@ -2,7 +2,7 @@
 ## Braces
 Braces are not required for when branches and if statement bodies which have no else if/else branches and which fit on a single line.
 
-```
+```kotlin
 if (string.isEmpty()) return
 
 when (value) {
@@ -12,7 +12,7 @@ when (value) {
 ```
 Braces are otherwise required for any if, for, when branch, do, and while statements, even when the body is empty or contains only a single statement.
 
-```
+```kotlin
 if (string.isEmpty())
     return  // WRONG!
 
@@ -28,7 +28,7 @@ Braces follow the Kernighan and Ritchie style ("Egyptian brackets") for nonempty
 - Line break before the closing brace.
 - Line break after the closing brace, only if that brace terminates a statement or terminates the body of a function, constructor, or named class. For example, there is no line break after the brace if it is followed by else or a comma.
 
-```
+```kotlin
 return Runnable {
     while (condition()) {
         foo()
@@ -56,12 +56,12 @@ A few exceptions for (enum classes)[http://reference_below] are given below.
 ### Empty blocks
 An empty block or block-like construct must be in K&R style.
 
-```
+```kotlin
 try {
     doSomething()
 } catch (e: Exception) {} // WRONG!
 ```
-```
+```kotlin
 try {
     doSomething()
 } catch (e: Exception) {
@@ -71,14 +71,14 @@ try {
 ### Expressions
 An if/else conditional that is used as an expression may omit braces only if the entire expression fits on one line.
 
-```
+```kotlin
 val value = if (string.isEmpty()) 0 else 1  // Okay
 val value = if (string.isEmpty())  // WRONG!
                 0
             else
                 1
 ```
-```
+```kotlin
 val value = if (string.isEmpty()) { // Okay
     0
 } else {
@@ -122,7 +122,7 @@ When there are multiple continuation lines, indentation may be varied beyond +8 
 ### Functions
 When a function signature does not fit on a single line, break each parameter declaration onto its own line. Parameters defined in this format should use a single indent (+4). The closing parenthesis (`)`) and return type are placed on their own line with no additional indent.
 
-```
+```kotlin
 fun <T> Iterable<T>.joinToString(
     separator: CharSequence = ", ",
     prefix: CharSequence = "",
@@ -135,12 +135,12 @@ fun <T> Iterable<T>.joinToString(
 #### Expression functions
 When a function contains only a single expression it can be represented as an expression function.
 
-```
+```kotlin
 override fun toString(): String {
     return "Hey"
 }
 ```
-```
+```kotlin
 override fun toString(): String = "Hey"
 ```
 Expression functions should not wrap to two lines. If an expression function grows to require wrapping, use a normal function body, a `return` declaration, and normal expression wrapping rules instead.
@@ -148,20 +148,20 @@ Expression functions should not wrap to two lines. If an expression function gro
 #### Properties
 When a property initializer does not fit on a single line, break after the equals sign (`=`) and use a continuation indent.
 
-```
+```kotlin
 private val defaultCharset: Charset? =
         EncodingRegistry.getInstance().getDefaultCharsetForPropertiesFiles(file)
 ```
 Properties declaring a `get` and/or `set` function should place each on their own line with a normal indent (+4). Format them using the same rules as functions.
 
-```
+```kotlin
 var directory: File? = null
     set(value) {
         // …
     }
 ```
 Read-only properties can use a shorter syntax which fits on a single line.
-```
+```kotlin
 val defaultExtension: String get() = "kt"
 ```
 
@@ -181,132 +181,132 @@ Multiple consecutive blank lines are permitted, but not encouraged or ever requi
 Beyond where required by the language or other style rules, and apart from literals, comments, and KDoc, a single ASCII space also appears in the following places only:
 
 - Separating any reserved word, such as `if`, `for`, or `catch` from an open parenthesis (`(`) that follows it on that line.
-```
+```kotlin
 // WRONG!
 for(i in 0..1) {
 }
 ```
-```
+```kotlin
 // Okay
 for (i in 0..1) {
 }
 ```
 - Separating any reserved word, such as `else` or `catch`, from a closing curly brace (`}`) that precedes it on that line.
-```
+```kotlin
 // WRONG!
 }else {
 }
 ```
-```
+```kotlin
 // Okay
 } else {
 }
 ```
 - Before any open curly brace (`{`).
-```
+```kotlin
 // WRONG!
 if (list.isEmpty()){
 }
 ```
-```
+```kotlin
 // Okay
 if (list.isEmpty()) {
 }
 ```
 - On both sides of any binary operator.
-```
+```kotlin
 // WRONG!
 val two = 1+1
 ```
-```
+```kotlin
 // Okay
 val two = 1 + 1
 ```
 This also applies to the following “operator-like” symbols:
 - - the arrow in a lambda expression (`->`).
-```
+```kotlin
 // WRONG!
 ints.map { value->value.toString() }
 ```
-```
+```kotlin
 // Okay
 ints.map { value -> value.toString() }
 ```
 But not:
 - - the two colons (`::`) of a member reference.
-```
+```kotlin
 // WRONG!
 val toString = Any :: toString
-```
+```kotlin
 ```// Okay
 val toString = Any::toString
 ```
 - - the dot separator (`.`).
-```
+```kotlin
 // WRONG
 it . toString()
 ```
-```
+```kotlin
 // Okay
 it.toString()
 ```
 - - the range operator (`..`).
-```
+```kotlin
 // WRONG
  for (i in 1 .. 4) print(i)
  ```
- ```
+ ```kotlin
  // Okay
  for (i in 1..4) print(i)
  ```
 - Before a colon (`:`) only if used in a class declaration for specifying a base class or interfaces, or when used in a where clause for generic constraints.
-```
+```kotlin
 // WRONG!
 class Foo: Runnable
 ```
-```
+```kotlin
 // Okay
 class Foo : Runnable
 ```
-```
+```kotlin
 // WRONG
 fun <T: Comparable> max(a: T, b: T)
 ```
-```
+```kotlin
 // Okay
 fun <T : Comparable> max(a: T, b: T)
 ```
-```
+```kotlin
 // WRONG
 fun <T> max(a: T, b: T) where T: Comparable<T>
 ```
-```
+```kotlin
 // Okay
 fun <T> max(a: T, b: T) where T : Comparable<T>
 ```
 - After a comma (`,`) or colon (`:`).
-```
+```kotlin
 // WRONG!
 val oneAndTwo = listOf(1,2)
 ```
-```
+```kotlin
 // Okay
 val oneAndTwo = listOf(1, 2)
 ```
-```
+```kotlin
 // WRONG!
 class Foo :Runnable
 ```
-```
+```kotlin
 // Okay
 class Foo : Runnable
 ```
 - On both sides of the double slash (`//`) that begins an end-of-line comment. Here, multiple spaces are allowed, but not required.
-```
+```kotlin
 // WRONG!
 var debugging = false//disabled by default
 ```
-```
+```kotlin
 // Okay
 var debugging = false // disabled by default
 ```
@@ -317,12 +317,12 @@ This rule is never interpreted as requiring or forbidding additional space at th
 ### Enum classes
 An enum with no functions and no documentation on its constants may optionally be formatted as a single line.
 
-```
+```kotlin
 enum class Answer { YES, NO, MAYBE }
 ```
 When the constants in an enum are placed on separate lines, a blank line is not required between them except in the case where they define a body.
 
-```
+```kotlin
 enum class Answer {
     YES,
     NO,
@@ -337,18 +337,19 @@ Since enum classes are classes, all other rules for formatting classes apply.
 ### Annotations
 Member or type annotations are placed on separate lines immediately prior to the annotated construct.
 
-```@Retention(SOURCE)
+```kotlin
+@Retention(SOURCE)
 @Target(FUNCTION, PROPERTY_SETTER, FIELD)
 annotation class Global
 ```
 Annotations without arguments can be placed on a single line.
-```
+```kotlin
 @JvmField @Volatile
 var disposable: Disposable? = null
 ```
 When only a single annotation without arguments is present, it may be placed on the same line as the declaration.
 
-```
+```kotlin
 @Volatile var disposable: Disposable? = null
 
 @Test fun selectAll() {
@@ -358,12 +359,12 @@ When only a single annotation without arguments is present, it may be placed on 
 ### Implicit return/property types
 If an expression function body or a property initializer is a scalar value or the return type can be clearly inferred from the body then it can be omitted.
 
-```
+```kotlin
 override fun toString(): String = "Hey"
 // becomes
 override fun toString() = "Hey"
 ```
-```
+```kotlin
 private val ICON: Icon = IconLoader.getIcon("/icons/kotlin.png")
 // becomes
 private val ICON = IconLoader.getIcon("/icons/kotlin.png")
@@ -378,7 +379,7 @@ Special prefixes or suffixes, like those seen in the examples `name_`, `mName`, 
 ### Package Names
 Package names are all lowercase, with consecutive words simply concatenated together (no underscores).
 
-```
+```kotlin
 // Okay
 package com.example.deepspace
 // WRONG!
@@ -397,7 +398,7 @@ Function names are written in camelCase and are typically verbs or verb phrases.
 
 Underscores are permitted to appear in test function names to separate logical components of the name.
 
-```
+```kotlin
 @Test fun pop_emptyStack() {
     // …
 }
@@ -408,7 +409,7 @@ Constant names use UPPER_SNAKE_CASE: all uppercase letters, with words separated
 
 Constants are `val` properties with no custom `get` function, whose contents are deeply immutable, and whose functions have no detectable side-effects. This includes immutable types and immutable collections of immutable types as well as scalars and string if marked as `const`. If any of an instance’s observable state can change, it is not a constant. Merely intending to never mutate the object is not enough.
 
-```
+```kotlin
 const val NUMBER = 5
 val NAMES = listOf("Alice", "Bob")
 val AGES = mapOf("Alice" to 35, "Bob" to 32)
@@ -424,7 +425,7 @@ Constants which are scalar values must use the `const` modifier.
 ### Non-constant names
 Non-constant names are written in camelCase. These apply to instance properties, local properties, and parameter names.
 
-```
+```kotlin
 val variable = "var"
 val nonConstScalar = "non-const"
 val mutableCollection: MutableSet = HashSet()
@@ -439,7 +440,8 @@ These names are typically nouns or noun phrases.
 ####Backing properties
 When a backing property is needed, its name should exactly match that of the real property except prefixed with an underscore.
 
-```private var _table: Map? = null
+```kotlin
+private var _table: Map? = null
 
 val table: Map
     get() {
@@ -485,7 +487,7 @@ Prose form	            Correct	            Incorrect
 ## Documentation
 ### Formatting
 The basic formatting of KDoc blocks is seen in this example:
-```
+```kotlin
 /**
  * Multiple lines of KDoc text are written here,
  * wrapped normally…
@@ -496,7 +498,7 @@ fun method(arg: String) {
 ```
 ...or in this single-line example:
 
-```
+```kotlin
 /** An especially short bit of KDoc. */
 ```
 The basic form is always acceptable. The single-line form may be substituted when the entirety of the KDoc block (including comment markers) can fit on a single line. Note that this only applies when there are no block tags such as `@return`.
