@@ -104,9 +104,9 @@ Exceptions:
 The prime directive of line-wrapping is: prefer to break at a higher syntactic level. Also:
 
 - When a line is broken at a non-assignment operator the break comes before the symbol.
-- - This also applies to the following “operator-like” symbols:
-- - The dot separator (`.`).
-- - The two colons of a member reference (`::`).
+  - This also applies to the following “operator-like” symbols:
+  - The dot separator (`.`).
+  - The two colons of a member reference (`::`).
 - When a line is broken at an assignment operator the break comes after the symbol.
 - A method or constructor name stays attached to the open parenthesis (`(`) that follows it.
 - A comma (`,`) stays attached to the token that precedes it.
