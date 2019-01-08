@@ -170,8 +170,8 @@ val defaultExtension: String get() = "kt"
 A single blank line appears:
 
 - Between consecutive members of a class: properties, constructors, functions, nested classes, etc.
-- - Exception: A blank line between two consecutive properties (having no other code between them) is optional. Such blank lines are used as needed to create logical groupings of properties and associate properties with their backing property, if present.
-- - Exception: Blank lines between enum constants are covered below.
+  - Exception: A blank line between two consecutive properties (having no other code between them) is optional. Such blank lines are used as needed to create logical groupings of properties and associate properties with their backing property, if present.
+  - Exception: Blank lines between enum constants are covered below.
 - Between statements, as needed to organize the code into logical subsections.
 - Optionally before the first statement in a function, before the first member of a class, or after the last member of a class (neither encouraged nor discouraged).
 - As required by other sections of this document (such as the Structure section).
@@ -223,7 +223,7 @@ val two = 1+1
 val two = 1 + 1
 ```
 This also applies to the following “operator-like” symbols:
-- - the arrow in a lambda expression (`->`).
+  - the arrow in a lambda expression (`->`).
 ```kotlin
 // WRONG!
 ints.map { value->value.toString() }
@@ -233,7 +233,7 @@ ints.map { value->value.toString() }
 ints.map { value -> value.toString() }
 ```
 But not:
-- - the two colons (`::`) of a member reference.
+  - the two colons (`::`) of a member reference.
 ```kotlin
 // WRONG!
 val toString = Any :: toString
@@ -241,7 +241,7 @@ val toString = Any :: toString
 ```// Okay
 val toString = Any::toString
 ```
-- - the dot separator (`.`).
+  - the dot separator (`.`).
 ```kotlin
 // WRONG
 it . toString()
@@ -250,7 +250,7 @@ it . toString()
 // Okay
 it.toString()
 ```
-- - the range operator (`..`).
+  - the range operator (`..`).
 ```kotlin
 // WRONG
  for (i in 1 .. 4) print(i)
@@ -466,8 +466,8 @@ Beginning with the prose form of the name:
 1. Convert the phrase to plain ASCII and remove any apostrophes. For example, “Müller’s algorithm” might become “Muellers algorithm”.
 2. Divide this result into words, splitting on spaces and any remaining punctuation (typically hyphens). Recommended: if any word already has a conventional camel-case appearance in common usage, split this into its constituent parts (e.g., “AdWords” becomes “ad words”). Note that a word such as “iOS” is not really in camel case per se; it defies any convention, so this recommendation does not apply.
 3. Now lowercase everything (including acronyms), then do one of the following:
-- - Uppercase the first character of each word to yield pascal case.
-- - Uppercase the first character of each word except the first to yield camel case.
+  - Uppercase the first character of each word to yield pascal case.
+  - Uppercase the first character of each word except the first to yield camel case.
 4. Finally, join all the words into a single identifier.
 
 Note that the casing of the original words is almost entirely disregarded.
