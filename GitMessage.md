@@ -23,15 +23,15 @@ Remember to
 
 Updates and git messages can follow below formats.
 
-**Example without jira task id**
-```
-[feat] integrate login api
-[fix]  specific bug fix
-```
-
 **Example with Jira Task id**
 ```
 [feat] SAR-12 integrate login api
+```
+
+**Example if Jira Task is not defined**
+```
+[feat] integrate login api
+[fix]  specific bug fix
 ```
 
 **Daily update Sample**
