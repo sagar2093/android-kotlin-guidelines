@@ -2,7 +2,7 @@ Type can be
 ```
 #    feat     (new feature)
 #    fix      (bug fix)
-#    wip      (work in progress)
+#    WIP      (work in progress)
 #    refactor (refactoring production code)
 #    refactor (formatting, missing semi colons, etc; no code change)
 #    docs     (changes to documentation)
