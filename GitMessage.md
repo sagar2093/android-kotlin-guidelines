@@ -22,6 +22,7 @@ Remember to
 ```
 
 Updates and git messages can follow below formats.
+
 **Example without jira task id**
 ```
 [feat] integrate login api
@@ -31,6 +32,17 @@ Updates and git messages can follow below formats.
 **Example with Jira Task id**
 ```
 [feat] SAR-12 integrate login api
+```
+
+**Daily update Sample**
+```skype
+*Today's Update (Jan-07,2019) *
+[feat] SAR-12 integrate login api
+  - add retrofit library
+  - fetch and parse login data
+  - handle api errors
+  - update UI with error
+  - update UI with success data
 ```
 
 
