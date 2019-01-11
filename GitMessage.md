@@ -10,13 +10,27 @@ Type can be
 #    chore    (updating grunt tasks etc; no production code change)
 ```
 
-**Some examples**
+Rules for git message and updates.
+```
+Remember to
+#    Capitalize the subject line
+#    Use the imperative mood in the subject line
+#    Do not end the subject line with a period
+#    Separate subject from body with a blank line
+#    Use the body to explain what and why vs. how
+#    Can use multiple lines with "-" for bullet points in body
+```
+
+Updates and git messages can follow below formats.
+**Example without jira task id**
 ```
 [feat] integrate login api
 [fix]  specific bug fix
 ```
 
-**Example for Jira Tasks**
+**Example with Jira Task id**
 ```
 [feat] SAR-12 integrate login api
 ```
+
+
