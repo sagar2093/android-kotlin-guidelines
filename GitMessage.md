@@ -36,7 +36,7 @@ Updates and git messages can follow below formats.
 
 **Daily update Sample**
 ```skype
-*Today's Update (Jan-07,2019) *
+*Today's Update (Jan-07,2019) - platform (i.e Android/iOS) *
 [feat] SAR-12 integrate login api
   - add retrofit library
   - fetch and parse login data
