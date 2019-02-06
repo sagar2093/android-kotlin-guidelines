@@ -34,3 +34,5 @@ Apps should only define a limited set of dimensions, which are constantly reused
 
 ### References
 1. https://medium.com/mindorks/android-resource-naming-convention-42e4e8026614
+2. https://jeroenmols.com/blog/2016/03/07/resourcenaming/
+3. https://github.com/ribot/android-guidelines/blob/master/project_and_code_guidelines.md
