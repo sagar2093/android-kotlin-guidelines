@@ -1,6 +1,6 @@
 Type can be 
 ```
-#    feat     (new feature)
+#    feature     (new feature)
 #    fix      (bug fix)
 #    WIP      (work in progress)
 #    refactor (refactoring production code)
@@ -25,19 +25,19 @@ Updates and git messages can follow below formats.
 
 **Example with Jira Task id**
 ```
-[feat] SAR-12 integrate login api
+[feature] SAR-12 integrate login api
 ```
 
 **Example if Jira Task is not defined**
 ```
-[feat] integrate login api
+[feature] integrate login api
 [fix]  specific bug fix
 ```
 
 **Daily update Sample**
 ```skype
 *Today's Update (Jan-07,2019) *
-[feat] SAR-12 integrate login api
+[feature] SAR-12 integrate login api
   - add retrofit library
   - fetch and parse login data
   - handle api errors
